@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OCFT</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	
+	<style>
+		.nav-glyphish-example .ui-btn { padding-top: 40px !important; }
+		.nav-glyphish-example .ui-btn:after { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+		#chat:after { background:  url("../_assets/img/glyphish-icons/09-chat2.png") 50% 50% no-repeat; background-size: 24px 22px; }
+		#email:after { background:  url("../_assets/img/glyphish-icons/18-envelope.png") 50% 50% no-repeat; background-size: 24px 16px;  }
+		#login:after { background:  url("../_assets/img/glyphish-icons/30-key.png") 50% 50% no-repeat;  background-size: 12px 26px; }
+		#beer:after { background:  url("../_assets/img/glyphish-icons/88-beermug.png") 50% 50% no-repeat;  background-size: 22px 27px; }
+		#coffee:after { background:  url("../_assets/img/glyphish-icons/100-coffee.png") 50% 50% no-repeat;  background-size: 20px 24px; }
+		#skull:after { background:  url("../_assets/img/glyphish-icons/21-skull.png") 50% 50% no-repeat;  background-size: 22px 24px; }
+
+	</style>
+	
+</head>
+<body>
+    
+<!-- Start of first page: #one -->
+
+ <div data-role="page" id="one" class="jqm-demos" data-quicklinks="true">
+      <div data-role="header">
+        <h1>ZEROS</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+      </div><!-- /header -->
+
+    <div role="main" class="ui-content" >
+     <div class="panel-content">
+       	  
+            <div class="ui-grid-a">
+                
+            <div class="ui-bar ui-bar-a" style="height:80px;background:white;text-align: center;"><img src="img/logo6.png" alt="Zeros logo"></div>
+            <!--   <div class="ui-bar ui-bar-a" style="height:80px;background:white;text-align: center">LähiTapiola enhances customer experience</div>-->
+               </div>
+                <!-- /grid-a -->
+             
+           </div>
+		
+			<a href="#two" class="ui-btn"><input type="button" data-icon="comment" data-iconpos="top" value="Customer Feedback" ></a>
+			<a href="#lottery" class="ui-btn"><input type="button" data-icon="check" data-iconpos="top" value="Lottery Results"></a>
+
+
+
+                <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Administration</a>
+                    <div data-role="popup" id="popupMenu" data-theme="b">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                    <li data-role="list-divider">Choose an action</li>
+                    <li><a href="#login1">Manage Assignment</a></li>
+                    <li><a href="#login2">Scoreband of subcontractors</a></li>
+                    </ul>
+                    </div>
+
+
+
+			</div>
+
+    <div data-role="panel" id="left-panel">
+        <ul data-role="listview">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        <li data-icon="home"><a href="#one">Dashboard</a></li>
+        	<li data-icon="comment"><a href="#">Customer Feedback</a></li>
+        	<li data-icon="eye"><a href="#login1" >Manage SubContractors</a></li>
+        	<li data-icon="star"><a href="#login2" >ScoreBand</a></li>
+			<li data-icon="check"><a href="#lottery" >Lottery Results</a></li>
+        </ul>
+    </div><!-- /panel -->
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
+
+        <ul data-role="listview" data-icon="false">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        	<li data-role="list-divider">Share this page</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google +</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+</div><!-- /page -->
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" class="jqm-demos" data-quicklinks="true">
+      <div data-role="header">
+        <h1>Feedback</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+      </div><!-- /header -->
+<!-- main page -->
+     <div role="main" class="ui-content">
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+					   
+						<legend>Lottery Preference:</legend>
+						<input type="radio" name="radio-choice-v-5" id="radio-choice-v-1a" value="on" checked="checked">
+						<label for="radio-choice-v-1a">20% discount for car insurance</label>
+						<input type="radio" name="radio-choice-v-5" id="radio-choice-v-1b" value="off">
+						<label for="radio-choice-v-1b">20% discount for home insurance</label>
+						<input type="radio" name="radio-choice-v-5" id="radio-choice-v-1c" value="other">
+						<label for="radio-choice-v-1c">20% discount for life insurance</label>
+						<input type="radio" name="radio-choice-v-5" id="radio-choice-v-1d" value="other">
+						<label for="radio-choice-v-1d">Gift card (worth 100 €)</label>
+					</fieldset>
+				</div>
+		
+		    	<div class="ui-field-contain">
+					<input type="password" name="keypassCFB" id="keypassCFBId" placeholder="Enter your KeyPass..." value="">
+				</div>
+				
+		        
+		        	<div data-role="collapsible" data-filtertext="Conseco">
+						<h3>Get Information</h3>
+						<ul data-role="listview" data-inset="false">
+							<li><label ><b>Name:</b> Simon Hoikonen</label></li>
+							<li><label><b>Subcontructor:</b> Mihai sorina</label></li>
+							<li><label ><b>Fixed By:</b> Sari hokannen</label></li>
+							<li><label ><b>Issue:</b> Window broken</label></li>
+							<li><label ><b>Date:</b> Monday 23th june 2015</label></li>
+                	        <li><p><img src="img/BrokenWindow.png" alt="Broken Window" style="text-indent: 5em"></p></li>
+                
+              
+			<li><label ><b>10 is Excellent</b></label></li>	</ul>	
+			<br>
+			 <ol data-role="listview" data-inset="true">
+			     <li>
+			   Takes enough time for fixing:</li>
+               <input type="range"  name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+                 
+                  <li>
+             Explains what you want to know:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+              Our reception staff were courteous and considerate:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Our staff were knowledgeable and helpful:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+            <li>
+            Our facilities:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+             
+            <li>  
+             provided service to you in an accessible manner: </li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+              
+                <li>
+             Problems accessing our service:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Would you recommend ourservice to other people?</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Your overall experience: </li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+              
+             </ol>
+				<div class="ui-field-contain">
+					<input type="text" name="keypassCFB" id="keypassCFBId" placeholder="Particular staff member worthy of special mention" value="">
+				</div>			
+				
+				</div>
+				
+					<div data-role="collapsible" data-filtertext="Conseco">
+						<h3>Feedback without KeyPass...</h3>
+						<ul data-role="listview" data-inset="false">
+							<li><input type="text" name="name" id="namee" placeholder="Name" value=""></li>
+							<li><input type="text" name="name" id="namee" placeholder="Email" value=""></li>
+							<li><input type="text" name="name" id="namee" placeholder="Issue" value=""></li>
+							<li><input type="text" name="name" id="namee" placeholder="More..." value=""></li>
+							
+                
+              
+			<li><label ><b>10 is Excellent</b></label></li>	</ul>	
+			<br>
+			 <ol data-role="listview" data-inset="true">
+			     <li>
+			   Takes enough time for fixing:</li>
+               <input type="range"  name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+                 
+                  <li>
+             Explains what you want to know:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+              Our reception staff were courteous and considerate:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Our staff were knowledgeable and helpful:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+            <li>
+            Our facilities:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+             
+            <li>  
+             provided service to you in an accessible manner: </li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+              
+                <li>
+             Problems accessing our service:</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Would you recommend ourservice to other people?</li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+               
+                <li>
+             Your overall experience: </li>
+              <input type="range" name="slider-1" id="slider-1" min="1" max="10" value="5" data-popup-enabled="true">
+              
+             </ol>
+				<div class="ui-field-contain">
+					<input type="text" name="keypassCFB" id="keypassCFBId" placeholder="Particular staff member worthy of special mention" value="">
+				</div>			
+				
+				</div>
+				
+				
+				
+		    
+				<a href="#dialog-success" data-rel="dialog" data-transition="flow" class="ui-btn ui-corner-all ui-shadow ">Submit</a>
+		        </div>
+
+    <div data-role="panel" id="left-panel">
+        <ul data-role="listview">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        		
+        	<li data-icon="home"><a href="#one">Dashboard</a></li>
+        	<li data-icon="comment"><a href="#">Customer Feedback</a></li>
+        	<li data-icon="eye"><a href="#login1" >Manage SubContractors</a></li>
+        	<li data-icon="star"><a href="#login2" >ScoreBand</a></li>
+			<li data-icon="check"><a href="#lottery" >Lottery Results</a></li>
+        </ul>
+    </div><!-- /panel -->
+    
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
+
+        <ul data-role="listview" data-icon="false">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        	<li data-role="list-divider">Share this page</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google +</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+</div><!-- /page -->
+
+<!-- Start of dialog-success page: #dialog-sucess -->
+
+	<div data-role="page" id="dialog-success" data-dom-cache="true"><!-- dialog-->
+
+		<div data-role="header" data-theme="b">
+			<h1>Submission</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content" role="main">
+		<p>SAVE your luck numbers</p>
+		 	<div class="ui-grid-c">
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:30px;text-align: center">2</div></div>
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:30px;text-align: center">6</div></div>
+					<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:30px;text-align: center">12</div></div>
+					<div class="ui-block-d"><div class="ui-bar ui-bar-a" style="height:30px;text-align: center">25</div></div>
+				</div><!-- /grid-c -->
+		    
+		    
+			<p>You can see the result of lottery, It happens on 23/12/2015</p>
+			
+			<a href="#one" class="ui-btn ui-corner-all ui-shadow ui-btn-b">OK</a>
+		</div>
+	</div><!-- dialog-->
+	
+<!-- Start of lottery page: #lottery -->
+<div data-role="page" id="lottery" class="jqm-demos" data-quicklinks="true">
+      <div data-role="header">
+        <h1>Lottery Result</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+      </div><!-- /header -->
+
+<!-- main page -->
+     <div role="main" class="ui-content">
+			<table data-role="table" id="table-custom-2" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe ui-responsive" data-column-btn-theme="b" data-column-btn-text="Columns to display..." data-column-popup-theme="a">
+
+                <thead>
+                  <tr class="ui-bar-d">
+                    <th data-priority="2">Date</th>
+                    <th>Winner Number</th>
+                    <th data-priority="3">Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>12/02/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>Car Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/03/2015</th>
+                    <td>12 19 42 36</td>
+                    <td>home Insurance</td>
+                  </tr>
+                   <tr>
+                    <th>12/04/2015</th>
+                    <td>1 13 15 19</td>
+                    <td>Car Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/05/2015</th>
+                    <td>42 46 82 33</td>
+                    <td>life Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/06/2015</th>
+                    <td>13 23 33 43</td>
+                    <td>life Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/07/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>home Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/08/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>Car Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/09/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>home Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/10/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>life Insurance</td>
+                  </tr>
+                  <tr>
+                    <th>12/11/2015</th>
+                    <td>12 16 18 20</td>
+                    <td>home Insurance</td>
+                  </tr>
+                </tbody>
+              </table>	
+   
+</div>
+
+   <div data-role="panel" id="left-panel">
+        <ul data-role="listview">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        	<li data-icon="home"><a href="#one">Dashboard</a></li>
+        	<li data-icon="comment"><a href="#">Customer Feedback</a></li>
+        	<li data-icon="eye"><a href="#login1" >Manage SubContractors</a></li>
+        	<li data-icon="star"><a href="#login2" >ScoreBand</a></li>
+			<li data-icon="check"><a href="#lottery" >Lottery Results</a></li>
+        </ul>
+    </div><!-- /panel -->
+
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
+
+        <ul data-role="listview" data-icon="false">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        	<li data-role="list-divider">Share this page</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google +</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+</div><!-- /page -->	
+	
+
+<!-- Start of third page: #three -->
+
+<div data-role="page" id="three" class="jqm-demos" data-quicklinks="true">
+      <div data-role="header">
+        <h1>Administration</h1>
+        <a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+      </div><!-- /header -->
+<!-- main page -->
+     <div role="main" class="ui-content">
+		
+		
+		<div data-role="collapsibleset">
+    
+ <div data-role="collapsible" data-theme="a" data-content-theme="a">
+   <h4>Create Assignment</h4>
+    
+        <form>
+             <input type="text" name="nameTxt" id="numId" value="" placeholder="Assignment ID">
+             <input type="text" name="nameTxt" id="nameId" value="" placeholder="Customer ID">
+			 <input type="text" name="addressTxt" id="addressId" value="" placeholder="Address">
+			 <input type="text" name="addressTxt" id="addressId" value="" placeholder="Issue">
+			  <select  name="createAssign" id="createAssignId" data-native-menu="false" data-iconpos="left">
+        	<option >Assigned Subcontractor</option>
+                    <option value="2">Berkshire Hathaway</option>
+                    <option value="3">Conseco</option>
+                    <option value="4">GAINSCO</option>
+                    <option value="5">MassMutual</option>
+                    <option value="6">Omega</option>
+            		<option value="7">Symetra</option>
+    		</select>
+
+                <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Save</a>
+                <div data-role="popup" id="popupBasic">
+                <p>Data saved successfully...</p>
+                </div>
+
+         </form>
+	
+ </div>
+ 
+ <div data-role="collapsible" data-theme="a" data-content-theme="a">
+   <h4>Add Subcontractor</h4>
+   <form>
+            <input type="text" name="numSub" id="numSubId" value="" placeholder="SubContractor ID">
+            <input type="text" name="nameSub" id="nameSubId" value="" placeholder="Name">
+            <input type="text" name="ssnSub" id="ssnSubId" value="" placeholder="SSN">
+			<input type="text" name="addressSub" id="addressSubId" value="" placeholder="Address">
+			<input type="date" data-role="date" placeholder="Date">  
+ 			<input type="text" name="wHoursSub" id="wHoursSubId" value="" placeholder="Working Hours per day">
+           	  <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Save</a>
+                <div data-role="popup" id="popupBasic">
+                <p>Data saved successfully...</p>
+                </div>
+   </form>
+  
+ </div>
+ 
+ <div data-role="collapsible" data-theme="a" data-content-theme="a">
+   <h4>Send Feedback Request</h4>
+    <form>
+      <input type="text" name="numSendFB" id="numSendFBId" value="" placeholder="Customer ID">
+	<input type="text" name="numSendFB" id="numSendFBId" value="" placeholder="Assignment ID">
+    <input type="email" name="emailSendFB" id="emailSendFBId" value="" placeholder="Email">
+    
+ 	  <a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Send</a>
+                <div data-role="popup" id="popupBasic">
+                <p>According to the provided information feedback request has been sent..</p>
+                </div>
+     </form>
+ </div>
+
+ <div data-role="collapsible" data-theme="a" data-content-theme="a">
+   <h4>Scoreband of Subcontractors</h4>
+    
+        <form>
+           
+			  <select  name="scoreboardSubcontractor" id="scoreboardSubcontractorId" data-native-menu="false" data-iconpos="left">
+        	<option>Select Subcontractor</option>
+                    <option value="2">Berkshire Hathaway</option>
+                    <option value="3">Conseco</option>
+                    <option value="4">GAINSCO</option>
+                    <option value="5">MassMutual</option>
+                    <option value="6">Omega</option>
+            		<option value="7">All</option>
+    		</select>
+    	<a href="chart.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Show</a>
+		<!--<input type="button"  value="Show">-->
+         </form>
+	
+ </div>
+</div>	
+
+	</div>
+   <div data-role="panel" id="left-panel">
+        <ul data-role="listview">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        <li data-icon="home"><a href="#one">Dashboard</a></li>
+        	<li data-icon="comment"><a href="#">Customer Feedback</a></li>
+        	<li data-icon="eye"><a href="#login1" >Manage SubContractors</a></li>
+        	<li data-icon="star"><a href="#login2" >ScoreBand</a></li>
+			<li data-icon="check"><a href="#lottery" >Lottery Results</a></li>
+        </ul>
+    </div><!-- /panel -->
+
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
+
+        <ul data-role="listview" data-icon="false">
+        	<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+        	<li data-role="list-divider">Share this page</li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Google +</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+
+    </div><!-- /panel -->
+</div><!-- /page -->	
+
+<!-- Start of adminlogin page: #login1 -->
+
+	<div data-role="page" id="login1" data-dom-cache="true"><!-- dialog-->
+
+		<div data-role="header" data-theme="b">
+			<h1>Login</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content" role="main">
+		
+		    <label for="txt-email">User Name</label>
+
+            <input type="text" name="txt-email" id="txt-email" value="">
+
+            <label for="txt-password">Password</label>
+
+            <input type="password" name="txt-password" id="txt-password" value="">
+
+            <fieldset data-role="controlgroup">
+
+                <input type="checkbox" name="chck-rememberme" id="chck-rememberme" checked="">
+
+                <label for="chck-rememberme">Remember me</label>
+
+            </fieldset>
+            
+
+	
+<fieldset data-cloud9-id="51" class="ui-grid-a">
+    <div data-cloud9-id="52" class="ui-block-a">	<a href="#three" class="ui-btn ui-corner-all ui-shadow ui-btn-b">OK</a></div>
+    <div data-cloud9-id="54" class="ui-block-b">	<a href="#one" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Cancel</a></div>
+</fieldset>
+
+		
+		
+			
+		</div>
+	</div><!-- dialog-->
+	
+<!-- Start of scoreband page: #login2 -->
+
+	<div data-role="page" id="login2" data-dom-cache="true"><!-- dialog-->
+
+		<div data-role="header" data-theme="b">
+			<h1>Login</h1>
+		</div><!-- /header -->
+
+		<div class="ui-content" role="main">
+		
+		    <label for="txt-email">User Name</label>
+
+            <input type="text" name="txt-email" id="txt-email" value="">
+
+            <label for="txt-password">Password</label>
+
+            <input type="password" name="txt-password" id="txt-password" value="">
+
+            <fieldset data-role="controlgroup">
+
+                <input type="checkbox" name="chck-rememberme" id="chck-rememberme" checked="">
+
+                <label for="chck-rememberme">Remember me</label>
+
+            </fieldset>
+
+			<fieldset data-cloud9-id="51" class="ui-grid-a">
+    <div data-cloud9-id="52" class="ui-block-a">	<a href="chart.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b">OK</a></div>
+    <div data-cloud9-id="54" class="ui-block-b">	<a href="#one" class="ui-btn ui-corner-all ui-shadow ui-btn-b">Cancel</a></div>
+</fieldset>	
+				
+		</div>
+	</div><!-- dialog-->
+
+</body>
+</html>
+
+
